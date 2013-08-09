@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset='utf-8'>
+  <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+  <script src='//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js'></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+  <script src="javascripts/common.js"></script>
+</head>
+<body>
+
+<script id="question_template" type="text/mustache">
+  {{#questions}}
+    <li>
+      <div class="number-of-question">
+        <p>Вопрос №{{number}}</p>
+      </div>
+      <div class="QandA">
+        <b><p class="question_text">{{text}}</p></b>
+        {{#radio_buttons}}
+        <input type="radio" name="{{name}}" value={{value}} required><label for="{{value}}"> {{text}}</label><br>
+        {{/radio_buttons}}
+        {{#checkboxes}}
+        {{/checkboxes}}
+        <span class="input-wrapper"><textarea id="{{id}}" name="{{id}}" rows="4" cols="80" required></textarea></span>
+      </div>
+    </li>
+  {{/questions}}  
+</script>
+  
+<div class="main">
+  <div class="row">
+    <form action="" method="post" enctype="multipart/form-data" class="" id="q-form" onsubmit="">
+    <fieldset>
+    <b><p>Заполните анкету.</p></b>
+    <ul class="questions">
+      <!--  Mustache will place content here  -->
+    </ul>
+    
+    <div class="tell-us-moar">
+        <b><p class="tell-us_more__welcome">Расскажите нам о себе.<p></b>
+        <ul class="tell-us-moar__questions">
+          <li class="tell-us__one-string">
+            <div class="tell-us__one-string__left">
+              Резюме до 250Кб
+            </div>
+            <div class="tell-us__one-string__right">
+              <span class="input-wrapper-fileresume"><input type="file" unselectable=on class="input-wrapper__input " text="123" name="FileResume" value="Attach"></span>
+            </div>
+          </li>
+          <li class="tell-us__one-string">
+            <div class="tell-us__one-string__left">
+              Ссылка на профиль в Мой Круге.
+            </div>
+            <div class="tell-us__one-string__right">
+              <span class="input-wrapper"><input  class="input-wrapper__input"  name="social-profile" value=""></span>
+            </div>
+          </li>
+          <li class="tell-us__one-string">
+            <div class="tell-us__one-string__left">
+              Имя, Фамилия.
+            </div>
+            <div class="tell-us__one-string__right">
+              <span class="input-wrapper"><input  class="input-wrapper__input"  name="FIO" value="" required></span>
+            </div>
+          </li>
+          <li class="tell-us__one-string">
+            <div class="tell-us__one-string__left">
+              Телефон.
+            </div>
+            <div class="tell-us__one-string__right">
+              <span class="input-wrapper"><input  class="input-wrapper__input"  name="phone" value="" required></span>
+            </div>
+          </li>
+          <li class="tell-us__one-string">
+            <div class="tell-us__one-string__left">
+              <b>E-mail.</b>
+            </div>
+            <div class="tell-us__one-string__right">
+              <span class="input-wrapper"><input  type="xsd:email" class="input-wrapper__input" name="emaile" value="" required></span>
+            </div>
+          </li>
+          <li class="tell-us__more-info">
+            <div class="tell-us__more-info__left">
+              Дополнительная информация.
+            </div>
+            <div class="tell-us__more-info__right">
+              <span class="input-wrapper"><textarea class="tell-us__more-info__input input-wrapper__input " rows="4" cols="80" name="moreinfo" ></textarea></span>
+            </div>
+          </li>
+          <li class="tell-us__one-string">
+            <div class="tell-us__one-string__left">
+
+            </div>
+            <div class="tell-us__one-string__right">
+              <label class="tell-us__one-string__right__recommendby" for="RecommendBy">Откуда вы узнали о нашем предложении?</label><br/>
+              <select class="" id="RecommendBy" tabindex="-1" required>
+                <option class="" value="no">Выбрать</option>
+                <option class="" value="от HR-менеджера Яндекса">от HR-менеджера Яндекса</option>
+                <option class="" value="Я.Субботник">Я.Субботник</option>
+                <option class="" value="Yet another Conference">Yet another Conference</option>
+                <option class="" value="на другой конференции">на другой конференции</option>
+                <option class="" value="из поиска">из поиска</option>
+                <option class="" value="по рекомендации">по рекомендации</option>
+                <option class="" value="other">другое</option>
+              </select>
+            </div>
+          </li>
+          <li class="tell-us__one-string">
+            <div class="tell-us__one-string__left">
+
+            </div>
+            <div class="tell-us__one-string__right">
+              <strong>
+                <input type="checkbox" value="true" id="agree-checkbox" name="agree" class="igree-checkbox" required>
+                <label class="i-igree">
+                  Я даю свое согласие на передачу в ООО «ЯНДЕКС» резюме и/или анкеты, содержащих мои персональные данные, и согласен с тем, что они будут храниться в ООО «ЯНДЕКС» в течение 5 лет и будут обрабатываться исключительно для целей предложения мне вакансий группы компаний «ЯНДЕКС», в соответствии с Федеральным законом «О персональных данных».
+                  </label>
+              </strong>
+            </div>
+          </li>
+
+        </ul>
+        <div class="tell-us-submit">
+          <span><input type="submit" class="tell-us-submit__button" hidefocus="true" value="Отправить"></span>
+          <span><input type="reset" class="tell-us-submit__button" hidefocus="true" value="Отчистить"></span>
+        </div>
+      </div>
+      </fieldset>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>
