@@ -1,3 +1,11 @@
+/*** color scheme
+
+#336699
+#FFCC66
+#FFFFFF
+#003366
+
+
 /*** main style ***/
 .main {
   width: 100%;
@@ -9,6 +17,7 @@
   margin: 0 auto;
   background: #fff;
   padding: 5px 0 0 0;
+  font-size: 13px;
 }
 
 .input-wrapper {
@@ -45,8 +54,17 @@
   box-sizing: border-box;
 }
 
+.input-wrapper__input__textarea {
+    resize: vertical;
+}
+
+. {
+
+}
+
 .i-igree {
   width: 590px;
+  text-align: justify;
 }
 /*** End of main style ***/
 
@@ -56,18 +74,10 @@
 .questions {
   list-style: none;
   padding: 0 0 10px 0;
-  font-size: 13px;
-
-}
-
-.questions textarea {
-  width: 562px;
-  resize: vertical;
 }
 
 .questions__one-quest {
-  width: 790px;
-  padding: 0 0 15px 20px;
+  padding: 0 0 20px 0;
   border-bottom: 1px solid #c0c0c0;
 }
 
@@ -100,13 +110,13 @@
 /*** tell-us common ***/
 .tell-us-moar {
   padding: 0;
+  margin: 50px 0 0 0;
 }
 
 
 .tell-us-moar__questions {
   list-style: none;
-  padding: 0 0 0 20px;
-  font-size: 13px;
+  padding: 0;
 }
 
 .tell-us__one-string,
@@ -132,7 +142,7 @@
 /*** End of tell-us common ***/
 
 .tell-us_more__welcome {
-
+    margin-bottom: 50px;
 }
 
 .tell-us__one-string__right,
@@ -163,7 +173,7 @@
 }
   
 .question_text {
-  font-size: 11pt;
+  font-size: 10pt;
   text-align: justify;
 };
   

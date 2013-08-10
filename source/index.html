@@ -5,27 +5,24 @@
   <meta charset='utf-8'>
   <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css">
   <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
-  <script src='//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js'></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
-  <script src="javascripts/common.js"></script>
 </head>
 <body>
 
 <script id="question_template" type="text/mustache">
   {{#questions}}
-    <li>
+    <li class="questions__one-quest">
       <div class="number-of-question">
         <p>Вопрос №{{number}}</p>
       </div>
       <div class="QandA">
         <b><p class="question_text">{{text}}</p></b>
         {{#radio_buttons}}
-        <input type="radio" name="{{name}}" value={{value}} required><label for="{{value}}"> {{text}}</label><br>
+            <input type="radio" name="{{name}}" value={{value}} required><label for="{{value}}"> {{text}}</label><br>
         {{/radio_buttons}}
         {{#checkboxes}}
+
         {{/checkboxes}}
-        <span class="input-wrapper"><textarea id="{{id}}" name="{{id}}" rows="4" cols="80" required></textarea></span>
+        <span class="input-wrapper"><textarea class="input-wrapper__input input-wrapper__input__textarea" id="{{id}}" name="{{id}}" rows="4" cols="80" required></textarea></span>
       </div>
     </li>
   {{/questions}}  
@@ -35,13 +32,13 @@
   <div class="row">
     <form action="" method="post" enctype="multipart/form-data" class="" id="q-form" onsubmit="">
     <fieldset>
-    <b><p>Заполните анкету.</p></b>
+    <b><p>Заполните анкету</p></b>
     <ul class="questions">
       <!--  Mustache will place content here  -->
     </ul>
     
     <div class="tell-us-moar">
-        <b><p class="tell-us_more__welcome">Расскажите нам о себе.<p></b>
+        <b><p class="tell-us_more__welcome">Расскажите нам о себе<p></b>
         <ul class="tell-us-moar__questions">
           <li class="tell-us__one-string">
             <div class="tell-us__one-string__left">
@@ -53,7 +50,7 @@
           </li>
           <li class="tell-us__one-string">
             <div class="tell-us__one-string__left">
-              Ссылка на профиль в Мой Круге.
+              Ссылка на профиль в Мой Круге
             </div>
             <div class="tell-us__one-string__right">
               <span class="input-wrapper"><input  class="input-wrapper__input"  name="social-profile" value=""></span>
@@ -61,7 +58,7 @@
           </li>
           <li class="tell-us__one-string">
             <div class="tell-us__one-string__left">
-              Имя, Фамилия.
+              Имя, Фамилия
             </div>
             <div class="tell-us__one-string__right">
               <span class="input-wrapper"><input  class="input-wrapper__input"  name="FIO" value="" required></span>
@@ -69,7 +66,7 @@
           </li>
           <li class="tell-us__one-string">
             <div class="tell-us__one-string__left">
-              Телефон.
+              Телефон
             </div>
             <div class="tell-us__one-string__right">
               <span class="input-wrapper"><input  class="input-wrapper__input"  name="phone" value="" required></span>
@@ -77,18 +74,18 @@
           </li>
           <li class="tell-us__one-string">
             <div class="tell-us__one-string__left">
-              <b>E-mail.</b>
+              <b>E-mail</b>
             </div>
             <div class="tell-us__one-string__right">
               <span class="input-wrapper"><input  type="xsd:email" class="input-wrapper__input" name="emaile" value="" required></span>
             </div>
           </li>
-          <li class="tell-us__more-info">
-            <div class="tell-us__more-info__left">
-              Дополнительная информация.
+          <li class="tell-us__one-string">
+            <div class="tell-us__one-string__left">
+              Дополнительная информация
             </div>
-            <div class="tell-us__more-info__right">
-              <span class="input-wrapper"><textarea class="tell-us__more-info__input input-wrapper__input " rows="4" cols="80" name="moreinfo" ></textarea></span>
+            <div class="tell-us__one-string__right">
+              <span class="input-wrapper"><textarea class="tell-us__one-string__textarea input-wrapper__input " rows="4" cols="80" name="moreinfo" ></textarea></span>
             </div>
           </li>
           <li class="tell-us__one-string">
@@ -115,9 +112,9 @@
             </div>
             <div class="tell-us__one-string__right">
               <strong>
-                <input type="checkbox" value="true" id="agree-checkbox" name="agree" class="igree-checkbox" required>
-                <label class="i-igree">
-                  Я даю свое согласие на передачу в ООО «ЯНДЕКС» резюме и/или анкеты, содержащих мои персональные данные, и согласен с тем, что они будут храниться в ООО «ЯНДЕКС» в течение 5 лет и будут обрабатываться исключительно для целей предложения мне вакансий группы компаний «ЯНДЕКС», в соответствии с Федеральным законом «О персональных данных».
+                <input type="checkbox" value="true" id="agree-checkbox" class="igree-checkbox" required>
+                <label class="i-igree" for="agree-checkbox">
+                  Я подверждаю, что введенная выше информация была тестово-выдуманной, последующая обработка и хранение которой, бессмысленна и никому не нужна.
                   </label>
               </strong>
             </div>
@@ -133,6 +130,11 @@
     </form>
   </div>
 </div>
+
+<script src='//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js'></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+<script src="javascripts/common.js"></script>
 
 </body>
 </html>
