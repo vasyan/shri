@@ -1,59 +1,85 @@
 <!DOCTYPE html>
+<!--[if lt IE 7]><html class="lt-ie9 lt-ie8 lt-ie7" lang="ru"><![endif]-->
+<!--[if IE 7]><html class="lt-ie9 lt-ie8" lang="ru"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9" lang="ru"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="ru"><!--<![endif]-->
 <html>
 <head>
   <title></title>
   <meta charset='utf-8'>
   <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css">
   <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <!--[if lt IE 9]>
+  <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 </head>
 <body>
 
 <script id="question_template" type="text/mustache">
   {{#questions}}
     <li class="questions__one-quest">
-      <div class="number-of-question">
-        <p>Вопрос №{{number}}</p>
+      <div class="questions__number-of-question">
+        <p>{{number}}</p>
       </div>
-      <div class="QandA">
-        <b><p class="question_text">{{text}}</p></b>
+      <div class="questions__QandA">
+        <span>
+        <p class="questions__QandA__text">{{text}}</p>
+          </span>
+
+
         {{#radio_buttons}}
             <input type="radio" name="{{name}}" value={{value}} required><label for="{{value}}"> {{text}}</label><br>
         {{/radio_buttons}}
+
+
         {{#checkboxes}}
 
         {{/checkboxes}}
-        <span class="input-wrapper"><textarea class="input-wrapper__input input-wrapper__input__textarea" id="{{id}}" name="{{id}}" rows="4" cols="80" required></textarea></span>
+        <textarea class="input-wrapper__input__textarea" id="{{id}}" name="{{id}}" rows="4" cols="80" required></textarea>
       </div>
     </li>
+  <hr/>
   {{/questions}}  
 </script>
   
 <div class="main">
+  <header>
+
+  </header>
+    <nav>
+      <ul class="">
+        <li>
+          <a href="">link#</a>
+        </li>
+      </ul>
+    </nav>
+
   <div class="row">
     <form action="" method="post" enctype="multipart/form-data" class="" id="q-form" onsubmit="">
     <fieldset>
-    <b><p>Заполните анкету</p></b>
+    <p >Заполните анкету</p>
     <ul class="questions">
       <!--  Mustache will place content here  -->
     </ul>
     
     <div class="tell-us-moar">
-        <b><p class="tell-us_more__welcome">Расскажите нам о себе<p></b>
+        <p class="tell-us_more__welcome">Расскажите нам о себе<p>
         <ul class="tell-us-moar__questions">
           <li class="tell-us__one-string">
             <div class="tell-us__one-string__left">
               Резюме до 250Кб
             </div>
             <div class="tell-us__one-string__right">
-              <span class="input-wrapper-fileresume"><input type="file" unselectable=on class="input-wrapper__input " text="123" name="FileResume" value="Attach"></span>
+              <div class="tell-us__fileresume"><input type="file" unselectable=on class="" text="123" name="FileResume" value="Attach"></div>
             </div>
           </li>
           <li class="tell-us__one-string">
             <div class="tell-us__one-string__left">
-              Ссылка на профиль в Мой Круге
+              Ссылка на профиль в Мой Круг
             </div>
             <div class="tell-us__one-string__right">
-              <span class="input-wrapper"><input  class="input-wrapper__input"  name="social-profile" value=""></span>
+             <input  class="tell-us__input"  name="social-profile" value="">
             </div>
           </li>
           <li class="tell-us__one-string">
@@ -61,7 +87,7 @@
               Имя, Фамилия
             </div>
             <div class="tell-us__one-string__right">
-              <span class="input-wrapper"><input  class="input-wrapper__input"  name="FIO" value="" required></span>
+              <input  class="input-wrapper__input"  name="FIO" value="" required>
             </div>
           </li>
           <li class="tell-us__one-string">
@@ -69,7 +95,7 @@
               Телефон
             </div>
             <div class="tell-us__one-string__right">
-              <span class="input-wrapper"><input  class="input-wrapper__input"  name="phone" value="" required></span>
+              <input  class="input-wrapper__input"  name="phone" value="" required>
             </div>
           </li>
           <li class="tell-us__one-string">
@@ -77,7 +103,7 @@
               <b>E-mail</b>
             </div>
             <div class="tell-us__one-string__right">
-              <span class="input-wrapper"><input  type="xsd:email" class="input-wrapper__input" name="emaile" value="" required></span>
+              <input  type="xsd:email" class="input-wrapper__input" name="emaile" value="" required>
             </div>
           </li>
           <li class="tell-us__one-string">
@@ -85,7 +111,7 @@
               Дополнительная информация
             </div>
             <div class="tell-us__one-string__right">
-              <span class="input-wrapper"><textarea class="tell-us__one-string__textarea input-wrapper__input " rows="4" cols="80" name="moreinfo" ></textarea></span>
+              <textarea class="tell-us__one-string__textarea" rows="4" cols="80" name="moreinfo" ></textarea>
             </div>
           </li>
           <li class="tell-us__one-string">
@@ -94,16 +120,18 @@
             </div>
             <div class="tell-us__one-string__right">
               <label class="tell-us__one-string__right__recommendby" for="RecommendBy">Откуда вы узнали о нашем предложении?</label><br/>
-              <select class="" id="RecommendBy" tabindex="-1" required>
-                <option class="" value="no">Выбрать</option>
-                <option class="" value="от HR-менеджера Яндекса">от HR-менеджера Яндекса</option>
-                <option class="" value="Я.Субботник">Я.Субботник</option>
-                <option class="" value="Yet another Conference">Yet another Conference</option>
-                <option class="" value="на другой конференции">на другой конференции</option>
-                <option class="" value="из поиска">из поиска</option>
-                <option class="" value="по рекомендации">по рекомендации</option>
-                <option class="" value="other">другое</option>
-              </select>
+              <div class="tell-us__one-string__right__recommendby__select_wrapper">
+                  <select class="tell-us__one-string__right__recommendby__select" id="RecommendBy" tabindex="-1" required>
+                    <option class="" value="no">Выбрать</option>
+                    <option class="" value="от HR-менеджера Яндекса">от HR-менеджера Яндекса</option>
+                    <option class="" value="Я.Субботник">Я.Субботник</option>
+                    <option class="" value="Yet another Conference">Yet another Conference</option>
+                    <option class="" value="на другой конференции">на другой конференции</option>
+                    <option class="" value="из поиска">из поиска</option>
+                    <option class="" value="по рекомендации">по рекомендации</option>
+                    <option class="" value="other">другое</option>
+                  </select>
+               </div>
             </div>
           </li>
           <li class="tell-us__one-string">
@@ -114,7 +142,7 @@
               <strong>
                 <input type="checkbox" value="true" id="agree-checkbox" class="igree-checkbox" required>
                 <label class="i-igree" for="agree-checkbox">
-                  Я подверждаю, что введенная выше информация была тестово-выдуманной, последующая обработка и хранение которой, бессмысленна и никому не нужна.
+                  Я подверждаю, что введенная выше информация была тестово-выдуманной, последующая обработка и хранение которой бессмысленна и никому не нужна.
                   </label>
               </strong>
             </div>
@@ -123,13 +151,29 @@
         </ul>
         <div class="tell-us-submit">
           <span><input type="submit" class="tell-us-submit__button" hidefocus="true" value="Отправить"></span>
-          <span><input type="reset" class="tell-us-submit__button" hidefocus="true" value="Отчистить"></span>
+          <span><input type="reset" class="tell-us-submit__button" hidefocus="true" value="Очистить"></span>
         </div>
       </div>
       </fieldset>
     </form>
   </div>
 </div>
+<footer>
+  <div class="copyright">
+    RubbleCrew © 2013 | all rights reserved
+  </div>
+  <ul class="footer__links">
+    <li>
+      <a href="">Написать нам</a>
+    </li>
+    <li>
+      <a href="">Проверить валидацию</a>
+    </li>
+    <li>
+      <a href="">Написать нам</a>
+    </li>
+  </ul>
+</footer>
 
 <script src='//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js'></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
