@@ -6,3 +6,8 @@ $(function() {
   });
   $('#q-form').validate();
 });
+$(document).ready(function(){
+
+    $("span.tester").addClass("second");
+
+})

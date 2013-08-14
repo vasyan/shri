@@ -16,9 +16,16 @@
 
 /*** end of sweety styles ***/
 
+.quest-wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:900);
+
 @font-face {
   font-family: "Archive";
-  src: url(/font/Archive.otf) format("opentype");
+  src: url(/font/Archive.ttf) format("truetype");
 }
 
 /*** main style ***/
@@ -38,7 +45,8 @@
 }
 
 
-.input-wrapper__input {
+.input-wrapper__input,
+.tell-us__one-string__textarea {
   width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -61,13 +69,22 @@
     overflow: auto;
 }
 
-.input-wrapper__input__textarea:focus {
+.input-wrapper__input__textarea:focus,
+.tell-us__one-string__textarea:focus {
     color:#000;
     outline:none;
     box-shadow: 0 0 10px rgba(256, 256, 256, 1);
     -webkit-box-shadow: 0 0 10px rgba(256, 256, 256, 1);
     -moz-box-shadow: 0 0 10px rgba(256, 256, 256, 1);
     background-color: #ffd;
+}
+
+.tell-us__one-string__textarea {
+  border: none;
+  width: 300px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
 }
 
 .input-wrapper__input {
@@ -77,7 +94,7 @@
     margin:5px 0px 10px 0px;
     padding:10px 10px 10px 10px;
     height:10px;
-    width:350px;
+    width:300px;
     border:#999 1px solid;
 }
 
@@ -89,13 +106,14 @@
     background-color: #ffd;
 }
 
-. {
-
-}
 
 .i-igree {
   width: 590px;
   text-align: justify;
+}
+
+.theme-of {
+  padding: 0 0 0 20px;
 }
 /*** End of main style ***/
 
@@ -126,16 +144,18 @@
 .questions__number-of-question {
 
   width: 148px;
-  padding: 0 0 0 17px;
+  padding: 20px 0 0 17px;
 
 }
 
-.questions__number-of-question p {
-  margin: 0;
+.questions__number-of-question span {
+
   padding: 4px 0 0 14px;
   vertical-align: baseline;
-  font: 195px/151px 'Ubuntu';
+  font: 195px "Source Code Pro";
   color: #fff;
+  font-weight: 900;
+  line-height: 134px;
 }
 
 .questions__QandA {
@@ -190,10 +210,16 @@
 }
 
 /*** End of tell-us common ***/
+
+
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   .tell-us__one-string__right__recommendby__select {
       padding-right:18px
   }
+}
+
+.tell-us__one-string__right {
+  width: 300px;
 }
 
 .tell-us__one-string__right__recommendby__select_wrapper {
