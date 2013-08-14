@@ -1,3 +1,5 @@
+
+
 /*** color scheme
 
 #336699
@@ -23,10 +25,6 @@
 
 @import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:900);
 
-@font-face {
-  font-family: "Archive";
-  src: url(/font/Archive.ttf) format("truetype");
-}
 
 /*** main style ***/
 .main {
@@ -41,7 +39,7 @@
   font-size: 17px;
   color: #fff;
   background-color: #456D90;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Verdana', sans-serif;
 }
 
 

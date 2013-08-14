@@ -1,8 +1,8 @@
 {
   "questions": [
-    { "id": "year-of-birth", "number": 1, "short": true, "text": "В каком году вы родились?" },
+    { "id": "year-of-birth", "number": 1, "short": true, "date": true, "text": "В каком году вы родились?" },
     { "id": "city", "number": 2, "short": true, "text": "В каком городе вы живёте?" },
-    { "id": "education-year", "number": 3, "short": true, "text": "Год окончания вуза" },
+    { "id": "education-year", "number": 3, "short": true, "date": true, "text": "Год окончания вуза" },
     { "id": "en-skill", "number": 4,
       "text": "Уровень владения английским языком",
       "name": "en_skill",
