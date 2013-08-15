@@ -42,6 +42,10 @@
   font-family: 'Verdana', sans-serif;
 }
 
+.row a {
+  color: #EFC58A;
+}
+
 
 .input-wrapper__input,
 .tell-us__one-string__textarea {
@@ -108,18 +112,32 @@
 .i-igree {
   width: 590px;
   text-align: justify;
+  font-family: "Helvetica";
 }
 
 .theme-of {
   padding: 0 0 0 20px;
 }
+
+.tell-us-submit__button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  color: #456D90;
+  padding: 10px 24px;
+  background: #fff;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #fff;
+}
+
 /*** End of main style ***/
 
 
 /*** Questions common ***/
 
 .questions {
-  width: 625px;
   list-style: none;
   padding: 0 0 10px 0;
 }
@@ -141,16 +159,17 @@
 
 .questions__number-of-question {
 
-  width: 148px;
-  padding: 20px 0 0 17px;
+  width: 157px;
+  padding: 17px 0 0 17px;
+  text-align: center;
 
 }
 
 .questions__number-of-question span {
 
-  padding: 4px 0 0 14px;
+  padding: 4px 20px 0 0px;
   vertical-align: baseline;
-  font: 195px "Source Code Pro";
+  font: 119px "Source Code Pro";
   color: #fff;
   font-weight: 900;
   line-height: 134px;
@@ -296,7 +315,6 @@
   text-align: center;
   margin: 20px 0 0 0;
   background: #C0C0C0;
-  height: 21px;
   padding: 18px 0;
 }
 

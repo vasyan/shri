@@ -4,10 +4,25 @@ $(function() {
     var html = Mustache.to_html(template, data);
     $('.questions').html(html);
       $(function(){
-          $(".datepick").datepicker();
+          $(".datepick").datepicker({
+              changeMonth: false,
+              changeYear: true,
+
+              yearRange: '1950:2013',
+              showButtonPanel: false
+          });
+
       });
   });
-  $('#q-form').validate();
+  $('#q-form').validate({
+      errorPlacement: function(error, element) {
+          offset = element.offset();
+          error.insertBefore(element)
+          error.addClass('validation-error-message');
+          error.css('position', 'relative');
+
+      }
+  });
 });
 $(document).ready(function(){
     $("span.tester").addClass("second");
@@ -38,3 +53,4 @@ jQuery.extend(jQuery.validator.messages, {
     max: jQuery.validator.format("Please enter a value less than or equal to {0}."),
     min: jQuery.validator.format("Please enter a value greater than or equal to {0}.")
 });
+
