@@ -1,0 +1,10 @@
+.row {
+  width: 743px;
+  margin: 0 auto;
+}
+
+.ship-console {
+  height: 397px;
+  width: 743px;
+  background: url("/images/ship-terminal.jpg") no-repeat;
+}
