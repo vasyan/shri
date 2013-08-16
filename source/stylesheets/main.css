@@ -29,7 +29,7 @@
 /*** main style ***/
 .main {
   width: 100%;
-  background: #f5f5f5;
+  background: #8EACC8;
 }
 
 .row {
@@ -44,6 +44,10 @@
 
 .row a {
   color: #EFC58A;
+}
+
+nav {
+
 }
 
 
@@ -124,7 +128,7 @@ select
 }
 
 .tell-us__one-string__right.tell-us__i-igree {
-  width: 531px;
+  width: 329px;
   font-size: 12px;
 }
 
@@ -140,6 +144,7 @@ select
   padding: 10px 24px;
   background: #fff;
   border: 1px solid #fff;
+  margin-left: 8px;
 }
 
 
@@ -176,6 +181,16 @@ select
 
 /*** End of no-script ***/
 
+/*** nav ***/
+
+.navigation {
+  list-style-type: none;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+/*** End of nav ***/
+
 
 /*** Questions common ***/
 
@@ -198,6 +213,11 @@ select
 }
 
 /*** End of Questions common ***/
+
+.datepick {
+  background: url("/images/calendar.png") no-repeat 277px 2px #f8f8f8;
+  border: #999 1px solid;
+}
 
 .questions__number-of-question {
 
@@ -267,7 +287,7 @@ select
 
 .tell-us__one-string__left,
 .tell-us__more-info__left {
-  width: 187px;
+  width: 212px;
   padding: 0 10px 0 0;
   vertical-align: top;
 }
@@ -403,5 +423,5 @@ select
 
 /*** End of validation ***/
 
-  
-  
+
+
