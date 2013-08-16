@@ -29,7 +29,7 @@
   {{#questions}}
     <li class="questions__one-quest">
       <div class="questions__number-of-question">
-        <span class="tester">{{number}}</span>
+        <span>{{number}}</span>
       </div>
       <div class="questions__QandA">
         <span>
@@ -37,7 +37,7 @@
           </span>
         <p>
         {{#radio_buttons}}
-            <input type="radio" name="{{name}}" value="{{value}}" required><label for="{{value}}">{{{text}}}</label><br>
+            <input id="quest__radio__{{value}}" class="quest__radio__input" type="radio" name="{{name}}" value="{{value}}"><label for="quest__radio__{{value}}">{{{text}}}</label><br>
         {{/radio_buttons}}
         </p>
 
@@ -45,7 +45,7 @@
 
         {{/checkboxes}}
         {{^short}}
-        <textarea class="input-wrapper__input__textarea" id="{{id}}" name="{{id}}" rows="4" cols="80" required></textarea>
+        <textarea class="input-wrapper__input__textarea" id="{{id}}" name="{{id}}" rows="4" cols="80"></textarea>
         {{/short}}
         {{#short}}
         <input  class="input-wrapper__input {{#date}}datepick{{/date}}"  id="{{id}}" name="{{id}}" value="{{value}}">
@@ -109,7 +109,7 @@
               Телефон
             </div>
             <div class="tell-us__one-string__right">
-              <input  class="input-wrapper__input"  name="phone" value="" required>
+              <input  class="input-wrapper__input"  name="phone" value="">
             </div>
           </li>
           <li class="tell-us__one-string">
@@ -117,7 +117,7 @@
               E-mail
             </div>
             <div class="tell-us__one-string__right">
-              <input  type="xsd:email" class="input-wrapper__input" name="emaile" value="" required>
+              <input  type="xsd:email" class="input-wrapper__input tell-us__e-mail-imput" name="emaile" value="" required>
             </div>
           </li>
           <li class="tell-us__one-string">
@@ -145,6 +145,7 @@
                     <option class="" value="по рекомендации">по рекомендации</option>
                     <option class="" value="other">другое</option>
                   </select>
+                <input class="recommendby__select__added-field" name="recommendedby">
                </div>
             </div>
           </li>
@@ -155,7 +156,7 @@
             <div class="tell-us__one-string__right tell-us__i-igree">
               <strong>
                 <input type="checkbox" value="true" id="agree-checkbox" class="igree-checkbox" required>
-                <label class="i-igree" for="agree-checkbox">
+                <label class="i-igree" for="agree-checkbox" >
                   Я подверждаю, что введенная выше информация была тестово-выдуманной, последующая обработка и хранение которой бессмысленна и никому не нужна.
                   </label>
               </strong>

@@ -14,6 +14,7 @@ $(function() {
 
       });
   });
+
   $('#q-form').validate({
       errorPlacement: function(error, element) {
           offset = element.offset();
@@ -37,9 +38,9 @@ $(function(){
 
 
 jQuery.extend(jQuery.validator.messages, {
-    required: "Это поле обязательно для заполнения.",
+    required: "Заполните это поле.",
     remote: "Исправте это поле.",
-    email: "Введите корhектный e-male адрес.",
+    email: "E-mail введен не верно.",
     url: "Введите корректный URL.",
     date: "Введите корректную дату.",
     number: "Введите число.",
@@ -53,4 +54,8 @@ jQuery.extend(jQuery.validator.messages, {
     max: jQuery.validator.format("Please enter a value less than or equal to {0}."),
     min: jQuery.validator.format("Please enter a value greater than or equal to {0}.")
 });
+
+
+
+
 

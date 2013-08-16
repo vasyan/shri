@@ -47,6 +47,22 @@
 }
 
 
+.tell-us-submit__button,
+.tell-us__one-string__textarea,
+.tell-us__one-string__right__recommendby__select_wrapper,
+.input-wrapper__input,
+.input-wrapper__input__textarea,
+.recommendby__select__added-field,
+.error.validation-error-message
+{
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border: none;
+
+}
+
+
 .input-wrapper__input,
 .tell-us__one-string__textarea {
   width: 100%;
@@ -60,9 +76,6 @@
     background-color: #fff;
     color:#666;
     font-size:14px;
-    border-radius: 4px;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
     margin:5px 0 3px 0;
     padding:10px;
     height:75px;
@@ -84,15 +97,9 @@
 .tell-us__one-string__textarea {
   border: none;
   width: 300px;
-  border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
 }
 
 .input-wrapper__input {
-    border-radius: 4px;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
     margin:5px 0px 10px 0px;
     padding:10px 10px 10px 10px;
     height:10px;
@@ -131,11 +138,10 @@
   color: #456D90;
   padding: 10px 24px;
   background: #fff;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
   border: 1px solid #fff;
 }
+
+
 
 /*** End of main style ***/
 
@@ -225,6 +231,10 @@
   margin: 0 5px 0 0;
 }
 
+.quest__radio__input {
+  margin: 0 5px 0 0;
+}
+
 
 /*** tell-us common ***/
 .tell-us-moar {
@@ -250,8 +260,7 @@
 .tell-us__more-info__left,
 .tell-us__more-info__right {
   display: inline-block;
-    zoom: 1;
-    *display: inline;
+
 
 }
 
@@ -273,16 +282,13 @@
 
 .tell-us__one-string__right {
   width: 300px;
+  position: relative;
 }
 
 .tell-us__one-string__right__recommendby__select_wrapper {
   width: 240px;
-  height: 27px;
   overflow: hidden;
   width: 198px;
-  border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
   margin: 16px 0 0 0;
 
 }
@@ -373,7 +379,23 @@
 }
 
 /*** end of footer ***/
-  
+
+
+/*** validation ***/
+
+.error.validation-error-message {
+  position: absolute!important;
+  color: #f00;
+  right: -170px;
+  top: 3px;
+  width: 145px;
+  font-size: 12px;
+  background: #fff;
+  padding: 5px 0 5px 10px;
+}
+
+
+/*** End of validation ***/
 
   
   
