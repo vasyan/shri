@@ -7,12 +7,23 @@
   <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
   <link rel="stylesheet" type="text/css" href="stylesheets/jquery.ui.datepicker.css">
   <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:900' rel='stylesheet' type='text/css'>
-  
+
   <!--[if lt IE 9]>
   <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
 <body>
+
+<noscript>
+
+  <noscript>
+    <div class="noscript-bg"></div>
+    <div class="noscript-text">
+      <b>На этом сайте используется JavaScript.</b><br>Пожалуйста <a target="_blank" href="https://www.google.com/support/adsense/bin/answer.py?answer=12654">включите JavaScript</a>  своем браузере.
+    </div>
+  </noscript>
+  ...
+</noscript>
 
 <script id="question_template" type="text/mustache">
   {{#questions}}
@@ -141,7 +152,7 @@
             <div class="tell-us__one-string__left">
 
             </div>
-            <div class="tell-us__one-string__right">
+            <div class="tell-us__one-string__right tell-us__i-igree">
               <strong>
                 <input type="checkbox" value="true" id="agree-checkbox" class="igree-checkbox" required>
                 <label class="i-igree" for="agree-checkbox">
@@ -183,6 +194,7 @@
 <script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
 <script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
 <script src="/javascripts/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="/javascripts/jquery.reveal.js"></script>
 <script src="/javascripts/jquery.ui.datepicker-ru.js"></script>
 <script src="/javascripts/common.js"></script>
 
