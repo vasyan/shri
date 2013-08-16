@@ -52,8 +52,9 @@
 .tell-us__one-string__right__recommendby__select_wrapper,
 .input-wrapper__input,
 .input-wrapper__input__textarea,
-.recommendby__select__added-field,
-.error.validation-error-message
+.recommendby__other,
+.error.validation-error-message,
+select
 {
   border-radius: 4px;
   -moz-border-radius: 4px;
@@ -286,9 +287,8 @@
 }
 
 .tell-us__one-string__right__recommendby__select_wrapper {
-  width: 240px;
+  width: 300px;
   overflow: hidden;
-  width: 198px;
   margin: 16px 0 0 0;
 
 }
@@ -308,8 +308,14 @@
   -moz-appearance:none;
   appearance:none;
   cursor:pointer;
-  background: url('/images/arrow-down-2.png') no-repeat 175px 7px #f8f8f8;
+  background: url('/images/arrow-down-2.png') no-repeat 274px 7px #f8f8f8;
 
+}
+
+.recommendby__other {
+  display: none;
+  width: 300px;
+  margin: 5px 0 0 0;
 }
 
 

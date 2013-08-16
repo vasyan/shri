@@ -36,6 +36,14 @@ $(function(){
 });
 
 
+$(function() {
+    $('#RecommendBy').on('change', function() {
+        $('.recommendby__other').hide();
+        $('.' + this.value).toggle();
+    })
+});
+
+
 
 jQuery.extend(jQuery.validator.messages, {
     required: "Заполните это поле.",
