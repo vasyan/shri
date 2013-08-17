@@ -33,7 +33,7 @@
 }
 
 .row {
-  width: 782px;
+  width: 783px;
   margin: 0 auto;
   padding: 5px 0 0 0;
   font-size: 17px;
@@ -185,8 +185,26 @@ select
 
 .navigation {
   list-style-type: none;
-  margin: 0 0 0 0;
+  width: 783px;
+  margin: 0 auto;
   padding: 0 0 0 0;
+  font-size: 0;
+}
+
+.navigation li {
+  display: inline-block;
+  border: 1px #c0c0c0 solid;
+  height: 50px;
+  width: 259px;
+  margin:0;
+  padding: 13px 0 0 0;
+  text-align: center;
+  font-size: 13px;
+  background: #54519B;
+}
+
+.navigation a {
+  color: #fff;
 }
 
 /*** End of nav ***/

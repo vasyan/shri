@@ -1,3 +1,22 @@
+function Vessel(name, position, capacity) {
+    this.name = name;
+    this.position = position;
+    this.capacity = capacity;
+    this.hold = 0;
+    toWriteIt("message", "Собран новый корабль «" + this.name + "»");
+}
+
+function Planet(name, position, availableAmountOfCargo) {
+    this.name = name;
+    this.position = position;
+    this.availableAmountOfCargo = availableAmountOfCargo;
+    toWriteIt("message", "Рождена новая планета «" + this.name + "»");
+    this.haveCargo = function(amount) {
+        return this.availableAmountOfCargo >= amount;
+    }
+}
+
+
 var vessel = new Vessel('Яндекс', [0,0], 1000);
 var planetA = new Planet('A', [0,0], 0);
 var planetB = new Planet('B', [100, 100], 5000);
