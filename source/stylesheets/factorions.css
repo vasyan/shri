@@ -39,3 +39,11 @@ blockquote:before {
   left: -20px;
   top: -20px;
 }
+
+.hidden-content {
+  display: none;
+}
+
+.hidden-content.no-hidden {
+  display: block;
+}
