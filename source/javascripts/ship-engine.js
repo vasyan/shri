@@ -3,11 +3,13 @@
  * @param type
  * @param msg
  */
+
 function r2d2_logger(type, msg) {
     $(".ships-console__log").append($("<li class='" + type + "'>" + msg + "</li>"));
     log_wrp = $(".ship-console");
     log_wrp.animate({
-        scrollTop: log_wrp.prop("scrollHeight") - log_wrp.height() }, 50);
+        scrollTop: log_wrp.prop("scrollHeight") - log_wrp.height()
+    }, 50);
 }
 
 /**
@@ -17,6 +19,7 @@ function r2d2_logger(type, msg) {
  * @param {Number}[] position Местоположение корабля.
  * @param {Number} capacity Грузоподъемность корабля.
  */
+
 function Vessel(name, position, capacity) {
     this.name = name;
     this.position = position;
@@ -38,7 +41,7 @@ Vessel.prototype.isLanded = function () {
  * Возвращает местоположение корабля.
  * @returns {*}
  */
-Vessel.prototype.getPosition = function() {
+Vessel.prototype.getPosition = function () {
     return (this.position instanceof Planet) ? this.position.name : this.position;
 }
 /**
@@ -51,9 +54,9 @@ Vessel.prototype.getPosition = function() {
  */
 Vessel.prototype.report = function () {
     var position;
-    if(this.isLanded()) {
+    if (this.isLanded()) {
         position = "Планета «" + this.position.name + "»";
-    } else{
+    } else {
         position = this.position;
     }
     return ("---------------------- <br/>Корабль «" + this.name + "». <br/>" +
@@ -101,6 +104,7 @@ Vessel.prototype.flyTo = function (newPosition) {
  * @param {Number}[] position Местоположение планеты.
  * @param {Number} availableAmountOfCargo Доступное количество груза.
  */
+
 function Planet(name, position, availableAmountOfCargo) {
     this.name = name;
     this.position = position;
@@ -114,7 +118,7 @@ function Planet(name, position, availableAmountOfCargo) {
  * @returns {boolean}
  */
 
-Planet.prototype.haveCargo = function(amount) {
+Planet.prototype.haveCargo = function (amount) {
     return this.availableAmountOfCargo >= amount;
 }
 
@@ -123,7 +127,7 @@ Planet.prototype.haveCargo = function(amount) {
  * @name Planet.report
  */
 Planet.prototype.report = function () {
-    return ( "----------------------<br/>Планета «" + this.name + "». <br/>" +
+    return ("----------------------<br/>Планета «" + this.name + "». <br/>" +
         "Местоположение: " + this.position + ". <br/>" +
         "Доступно груза: " + this.getAvailableAmountOfCargo()) + "<br/> ----------------------";
 }
@@ -147,8 +151,7 @@ Planet.prototype.loadCargoTo = function (vessel, cargoWeight) {
     if (vessel.isLanded()) {
         if (this.haveCargo(cargoWeight)) {
             if (vessel.cargo + cargoWeight <= vessel.capacity) {
-                r2d2_logger("message", "Капитан, на корабль «" + vessel.name + "»"
-                    + " погружено "+ cargoWeight + "единиц груза!");
+                r2d2_logger("message", "Капитан, на корабль «" + vessel.name + "»" + " погружено " + cargoWeight + "единиц груза!");
                 this.availableAmountOfCargo -= cargoWeight;
                 vessel.cargo += cargoWeight;
             } else {
@@ -176,7 +179,7 @@ Planet.prototype.unloadCargoFrom = function (vessel, cargoWeight) {
             this.availableAmountOfCargo += cargoWeight;
             vessel.cargo -= cargoWeight;
         } else {
-            r2d2_logger("error", "Капитан, на корабле «"+ vessel.name + "» недостаточно груза.")
+            r2d2_logger("error", "Капитан, на корабле «" + vessel.name + "» недостаточно груза.")
         }
     } else {
         r2d2_logger("error", 'Капитан, мы в открытом космосе! Сначала нужно кинуть гравитационный якорь!')
@@ -188,34 +191,34 @@ Planet.prototype.unloadCargoFrom = function (vessel, cargoWeight) {
  */
 
 function bigBang() {
-    var vessel = new Vessel('Яндекс', [0,0], 1000);
+    var vessel = new Vessel('Яндекс', [0, 0], 1000);
     var planetA = new Planet('А', [66, 88], 1000);
     var planetB = new Planet('Б', [102, 754], 1000);
 
-    $(".goto-planetA").on("click", function() {
+    $(".goto-planetA").on("click", function () {
         vessel.flyTo(planetA);
     });
-    $(".goto-planetB").on("click", function() {
+    $(".goto-planetB").on("click", function () {
         vessel.flyTo(planetB);
     });
-    $(".download-to-ship").on("click", function() {
+    $(".download-to-ship").on("click", function () {
         if (vessel.isLanded()) {
             vessel.position.loadCargoTo(vessel, 500);
-        } else{
+        } else {
             r2d2_logger("error", "Перед загрузкой груза приземлитесь на планету");
         }
     });
-    $(".unload-from-ship").on("click", function() {
+    $(".unload-from-ship").on("click", function () {
         if (vessel.isLanded()) {
             vessel.position.unloadCargoFrom(vessel, 500)
-        } else{
+        } else {
             r2d2_logger("error", "Перед выгрузкой груза приземлитесь на планету");
         }
     });
-    $(".ship-status").on("click", function() {
+    $(".ship-status").on("click", function () {
         r2d2_logger("report", vessel.report());
     });
-    $(".scanner").on("click", function() {
+    $(".scanner").on("click", function () {
         r2d2_logger("report", planetA.report());
         r2d2_logger("report", planetB.report());
     });
@@ -225,7 +228,7 @@ function bigBang() {
  * Начало всех начал.
  */
 
-$(function() {
+$(function () {
     bigBang();
 });
 
