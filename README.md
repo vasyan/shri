@@ -17,4 +17,4 @@
   * Плагин валидации jQuery.Validate версии 1.11.1 [сайт](http://plugins.jquery.com/validate/)
   * Плагин выбора даты из jQuery UI версии 1.10 [сайт](http://jqueryui.com/)
   * Шаблонизатор Mustache версии 0.7.2 [сайт](http://mustache.github.io/)
-  * Для задачи с космическим кораблем немного Светлой стороны Силы [вики](http://en.wikipedia.org/wiki/Force_(Star_Wars)
+  * Для задачи с космическим кораблем немного Светлой стороны Силы [вики](http://en.wikipedia.org/wiki/Force_(Star_Wars))
