@@ -1,0 +1,41 @@
+.list-of-all-factorions {
+  list-style: none;
+  padding: 0;
+}
+
+.content {
+  padding: 0 0 0 20px;
+  min-height: 600px;
+}
+
+#calc-factorions {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  color: #456D90;
+  padding: 10px 24px;
+  background: #fff;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+}
+
+blockquote {
+  font-family: Georgia, serif;
+  font-size: 18px;
+  font-style: italic;
+  width: 500px;
+  margin: 0 0 0 100px;
+  padding: 10px 40px;
+  line-height: 1.45;
+  position: relative;
+}
+
+blockquote:before {
+  display: block;
+  content: "\201C";
+  font-size: 80px;
+  position: absolute;
+  left: -20px;
+  top: -20px;
+}

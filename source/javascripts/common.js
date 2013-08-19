@@ -3,36 +3,44 @@ $(function() {
     var template = $('#question_template').html();
     var html = Mustache.to_html(template, data);
     $('.questions').html(html);
-      $(function(){
-          $(".datepick").datepicker({
-              changeMonth: false,
-              changeYear: true,
 
-              yearRange: '1950:2013',
-              showButtonPanel: false
-          });
-
+    $(function(){
+      $(".datepick").datepicker({
+          changeMonth: false,
+          changeYear: true,
+          yearRange: '1950:1998',
+          showButtonPanel: false
       });
+    });
+  });
+    jQuery.validator.setDefaults({
+        debug: true,
+        success: "valid"
+    });
+  $('#anketa').validate({
+    errorPlacement: function(error, element) {
+      offset = element.offset();
+      error.insertBefore(element)
+      error.addClass('validation-error-message');
+      error.css('position', 'relative');
+    }
   });
 
-  $('#q-form').validate({
-      errorPlacement: function(error, element) {
-          offset = element.offset();
-          error.insertBefore(element)
-          error.addClass('validation-error-message');
-          error.css('position', 'relative');
-
-      }
-  });
+    $('.tell-us__e-mail-input').validate({
+        rules: {
+            field: {
+            required: true,
+            email: true
+            }
+        }
+    });
 });
 $(document).ready(function(){
-    $("span.tester").addClass("second");
-
-
-})
+  $("span.tester").addClass("second");
+});
 
 $(function(){
-    $(".datepick").datepicker();
+  $(".datepick").datepicker();
 });
 
 
@@ -46,7 +54,7 @@ $(function() {
 
 
 jQuery.extend(jQuery.validator.messages, {
-    required: "Заполните это поле.",
+    required: "Это поле обязательно.",
     remote: "Исправте это поле.",
     email: "E-mail введен не верно.",
     url: "Введите корректный URL.",

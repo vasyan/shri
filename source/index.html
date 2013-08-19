@@ -4,6 +4,7 @@
   <title>Анкета</title>
   <meta charset='utf-8'>
   <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/all.css">
   <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
   <link rel="stylesheet" type="text/css" href="stylesheets/jquery.ui.datepicker.css">
   <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:900' rel='stylesheet' type='text/css'>
@@ -36,7 +37,6 @@
             <input id="quest__radio__{{value}}" class="quest__radio__input" type="radio" name="{{name}}" value="{{value}}"><label for="quest__radio__{{value}}">{{{text}}}</label><br>
         {{/radio_buttons}}
         </p>
-
         {{#checkboxes}}
 
         {{/checkboxes}}
@@ -60,10 +60,10 @@
           <a href="travel-by-ship.html">Отправиться в путешествие<br/> на корабле Яндекс</a>
         </li>
         <li>
-          <a href="#">Высчитать все факторины<br/> на этой земле</a>
+          <a href="factorions.html">Высчитать все факторины<br/> на этой земле</a>
         </li>
         <li>
-          <a href="#">Пройти тест<br/> на интелект</a>
+          <a href="index.html">Заполнить анкету<br/> ШРИ 2013</a>
         </li>
       </ul>
     </nav>
@@ -72,7 +72,7 @@
 
 
   <div class="row">
-    <form action="" method="post" enctype="multipart/form-data" class="" id="q-form" onsubmit="">
+    <form action="" method="post" enctype="multipart/form-data" class="" id="anketa" onsubmit="">
     <fieldset>
     <p class="theme-of" >Заполните анкету</p>
     <ul class="questions">
@@ -87,7 +87,7 @@
               Резюме до 250Кб
             </div>
             <div class="tell-us__one-string__right">
-              <div class="tell-us__fileresume"><input type="file" unselectable=on class="" text="123" name="FileResume" value="Attach"></div>
+              <div class="tell-us__fileresume"><input type="file" unselectable="on" name="FileResume" value="Attach"></div>
             </div>
           </li>
           <li class="tell-us__one-string">
@@ -103,7 +103,7 @@
               Имя, Фамилия
             </div>
             <div class="tell-us__one-string__right">
-              <input  class="input-wrapper__input"  name="FIO" value="" required>
+              <input  class="input-wrapper__input"  name="FIO" value="" required="required">
             </div>
           </li>
           <li class="tell-us__one-string">
@@ -119,7 +119,7 @@
               E-mail
             </div>
             <div class="tell-us__one-string__right">
-              <input  type="xsd:email" class="input-wrapper__input tell-us__e-mail-imput" name="emaile" value="" required>
+              <input class="input-wrapper__input tell-us__e-mail-input" name="email" required="required">
             </div>
           </li>
           <li class="tell-us__one-string">
@@ -137,7 +137,7 @@
             <div class="tell-us__one-string__right">
               <label class="tell-us__one-string__right__recommendby" for="RecommendBy">Откуда вы узнали о нашем предложении?</label><br/>
               <div class="tell-us__one-string__right__recommendby__select_wrapper">
-                  <select class="tell-us__one-string__right__recommendby__select" id="RecommendBy" tabindex="-1" required>
+                  <select class="tell-us__one-string__right__recommendby__select" id="RecommendBy" tabindex="-1" required="required">
                     <option class="" value="no">Выбрать</option>
                     <option class="" value="hr">от HR-менеджера Яндекса</option>
                     <option class="" value="ya.subbotnik">Я.Субботник</option>
@@ -157,7 +157,7 @@
             </div>
             <div class="tell-us__one-string__right tell-us__i-igree">
               <strong>
-                <input type="checkbox" value="true" id="agree-checkbox" class="igree-checkbox" required>
+                <input type="checkbox" value="true" id="agree-checkbox" class="igree-checkbox" required="required">
                 <label class="i-igree" for="agree-checkbox" >
                   Я подверждаю, что введенная выше информация была тестово-выдуманной, последующая обработка и хранение которой бессмысленна и никому не нужна.
                   </label>
@@ -174,27 +174,26 @@
       </div>
       </fieldset>
     </form>
+    <footer>
+      <div class="copyright">
+        RubbleCrew © 2013 | all rights reserved
+      </div>
+      <ul class="footer__links">
+        <li>
+          <a href="mailto:vasilyator@gmail.com">Написать нам</a>
+        </li>
+      </ul>
+      <span class="disignedBy">Disigned by OnMyKnee</span>
+    </footer>
   </div>
+
 </div>
-<footer>
-  <div class="copyright">
-    RubbleCrew © 2013 | all rights reserved
-  </div>
-  <ul class="footer__links">
-    <li>
-      <a href="#">Написать нам</a>
-    </li>
-    <li>
-      <a href="#">Проверить валидацию</a>
-    </li>
-  </ul>
-  <span>Disigned by OnMyKnee</span>
-</footer>
+
 
 
 
 <script src='//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js'></script>
-<script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="//yandex.st/jquery/2.0.3/jquery.min.js"></script>
 <script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
 <script src="/javascripts/jquery-ui-1.10.3.custom.min.js"></script>
 <script src="/javascripts/jquery.ui.datepicker-ru.js"></script>

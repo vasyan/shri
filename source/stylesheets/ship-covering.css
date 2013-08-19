@@ -1,27 +1,52 @@
+body {
+  background-image: url("../images/background.jpg");
+}
+
 .row {
-  width: 743px;
+  width: 783px;
   margin: 0 auto;
+  background: none;
+
 }
 
 .ship-console {
   height: 397px;
-  width: 743px;
-  background: url("/images/ship-terminal.jpg") no-repeat;
+  background: url("../images/ship-terminal.jpg") no-repeat;
+  overflow: auto;
+  box-shadow: 0px 150px 400px rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 0px 0px 400px rgba(255, 255, 255, 1);
+  -moz-box-shadow: 0px 150px 400px rgba(255, 255, 255, 1);
+  opacity: 0.85;
+}
+
+.ships-console__log {
+  list-style: none;
+  font-weight: 900;
+  outline: 1;
+}
+
+.error {
+  color: #E30D1D;
+}
+
+.message,
+.falcon {
+  color: lightgreen;
+}
+
+.report {
+  color: #63C9E2;
 }
 
 .dashboard {
-  padding: 10px 0 0 0;
-  text-align: center;
+  padding: 10px 0 0 150px;
 }
 
 .dashboard__status {
-
   height: 70px;
 }
 
-
 button {
-
   -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
   -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
   box-shadow:inset 0px 1px 0px 0px #ffffff;
@@ -43,8 +68,10 @@ button {
   font-size:15px;
   font-weight:bold;
   padding:6px 24px;
+  margin: 4px 0 0 0;
   text-decoration:none;
   text-shadow:0px 1px 0px #ffffff;
+  width: 200px;
 }
 button:hover {
   background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed));
@@ -61,30 +88,10 @@ button:active {
   top:1px;
 }
 
-
-
-
-
-.navigation {
-  list-style-type: none;
-  width: 783px;
-  margin: 0 auto;
-  padding: 0 0 0 0;
-  font-size: 0;
+#falcon {
+  display: none;
 }
 
-.navigation li {
-  display: inline-block;
-  border: 1px #c0c0c0 solid;
-  height: 50px;
-  width: 259px;
-  margin:0;
-  padding: 13px 0 0 0;
-  text-align: center;
-  font-size: 13px;
-  background: #54519B;
-}
-
-.navigation a {
-  color: #fff;
+.falcon {
+  font-size:7px;
 }

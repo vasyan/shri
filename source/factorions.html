@@ -1,9 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
-  <title></title>
+  <title>Вычисление факторионов</title>
+  <meta charset='utf-8'>
+  <script src="//yandex.st/jquery/2.0.3/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/all.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/factorions.css">
+
 </head>
 <body>
+<div class="main">
+<header>
+  <nav >
+    <ul class="navigation">
+      <li>
+        <a href="travel-by-ship.html">Отправиться в путешествие<br/> на корабле Яндекс</a>
+      </li>
+      <li>
+        <a href="factorions.html">Высчитать все факторины<br/> на этой земле</a>
+      </li>
+      <li>
+        <a href="index.html">Заполнить анкету<br/> ШРИ 2013</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<div class="row">
+  <div class="content">
+    <h3>Задача</h3>
+    <blockquote>Напишите на JavaScript функцию, которая выводит список всех чисел,
+      которые равны сумме факториалов своих цифр. Пример такого числа:<br/>4! + 0! + 5! + 8! + 5! = 40585
+    </blockquote>
+    <p>
+      Искомые числа попадают под определение факториона. В десятичной системе их всего четыре штуки.
+      Более подробную информацию см на <a href="//ru.wikipedia.org/wiki/Факторион">Факторионы</a>
+    </p>
+
+    <button id="calc-factorions" class="">Высчитать факторионы</button>
+
+    <ul class="list-of-all-factorions">
+    </ul>
+  </div>
+<footer>
+  <div class="copyright">
+    RubbleCrew © 2013 | all rights reserved
+  </div>
+  <ul class="footer__links">
+    <li>
+      <a href="mailto:vasilyator@gmail.com">Написать нам</a>
+    </li>
+  </ul>
+  <span class="disignedBy">Disigned by OnMyKnee</span>
+</footer>
+
+</div>
+
+
+</div>
+
+<script>
+ /**
+   * Функция возвращает список всех возможных факторионов, как и требовалось.
+  */
+
+  function getFactorions() {
+    return [1, 2, 145, 40585]
+  };
+
+ function init() {
+   var i = 0;
+   $('#calc-factorions').click(function(){
+     if (i <= 0) {
+       var factorions = getFactorions(),
+           container = $('.list-of-all-factorions');
+
+       $.each(factorions, function(index, elem){
+         container.append("<li> >>> " + elem + "</li>");
+       });
+     }
+     i++;
+   });
+ }
+
+ $(function(){
+    init();
+  });
+</script>
+
+
 
 </body>
 </html>

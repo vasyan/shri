@@ -1,55 +1,109 @@
-@charset "utf-8";
-
-body {
-  background: #d4d4d4 url("../images/background.png");
-  text-align: center;
-  font-family: sans-serif; }
-
-h1 {
-  color: rgba(0, 0, 0, .3);
-  font-weight: bold;
-  font-size: 32px;
-  letter-spacing: -1px;
-  text-transform: uppercase;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
-  background: url("../images/middleman.png") no-repeat center 100px;
-  padding: 350px 0 10px;
-  margin: 0; }
-
-.doc {
-  font-size: 14px;
-  margin: 0; }
-  .doc:before,
-  .doc:after {
-    opacity: .2;
-    padding: 6px;
-    font-style: normal;
-    position: relative;
-    content: "•"; }
-  .doc a {
-    color: rgba(0, 0, 0, 0.3); }
-    .doc a:hover {
-      color: #666; }
-
-.welcome {
-  -webkit-animation-name: welcome;
-  -webkit-animation-duration: .9s; }
-
-@-webkit-keyframes welcome {
-  from {
-    -webkit-transform: scale(0);
-    opacity: 0;
-  }
-  50% {
-   -webkit-transform: scale(0);
-   opacity: 0;
-  }
-  82.5% {
-    -webkit-transform: scale(1.03);
-    -webkit-animation-timing-function: ease-out;
-    opacity: 1;
-  }
-  to {
-    -webkit-transform: scale(1);
-  }
+.main {
+  width: 100%;
+  background: #8EACC8;
 }
+
+.row {
+  width: 783px;
+  margin: 0 auto;
+  padding: 5px 0 0 0;
+  font-size: 17px;
+  color: #fff;
+  background-color: #456D90;
+  font-family: 'Verdana', sans-serif;
+}
+
+.row a {
+  color: #EFC58A;
+}
+
+
+/*** nav ***/
+
+.navigation {
+  list-style-type: none;
+  width: 783px;
+  margin: 0 auto;
+  padding: 0 0 0 0;
+  font-size: 0;
+}
+
+.navigation li {
+  display: inline-block;
+  border: 1px #c0c0c0 solid;
+  height: 50px;
+  width: 259px;
+  margin:0;
+  padding: 13px 0 0 0;
+  text-align: center;
+  font-size: 13px;
+  background: #54519B;
+}
+
+.navigation a {
+  color: #fff;
+}
+
+/*** End of nav ***/
+
+/*** footer ***/
+footer {
+  position: relative;
+  background: #c6c6c6;
+  color: #000000;
+  padding: 0 0 0 17px;
+  border-top: #eee 2px solid;
+}
+
+.footer__links {
+  list-style: none;
+}
+
+.footer__links li,
+.copyright,
+.footer__links {
+  display: inline-block;
+}
+
+.footer__links a {
+  color: #54519B;
+}
+
+.disignedBy {
+  position: absolute;
+  right: 19px;
+  top: 17px;
+}
+
+/*** end of footer ***/
+
+/*** no-script ***/
+
+.noscript-bg {
+  background-color: black;
+  height: 100%;
+  left: 0;
+  opacity: 0.8;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999999;
+}
+
+.noscript-text {
+  position: absolute;
+  top: 30%;
+  height: 300px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+
+  z-index: 9999999;
+}
+
+.noscript-text a {
+  color: #EFC58A;
+}
+
+/*** End of no-script ***/
+

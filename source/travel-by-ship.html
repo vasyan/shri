@@ -4,21 +4,29 @@
   <title>Через всю галактику</title>
   <meta charset='utf-8'>
   <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/all.css">
   <link rel="stylesheet" type="text/css" href="stylesheets/ship-covering.css">
 </head>
 <body>
 
+<noscript>
+  <div class="noscript-bg"></div>
+  <div class="noscript-text">
+    <b>На этом сайте используется JavaScript.</b><br>Пожалуйста <a target="_blank" href="https://www.google.com/support/adsense/bin/answer.py?answer=12654">включите JavaScript</a>  своем браузере.
+  </div>
+</noscript>
+
 <header>
-  <nav >
+  <nav>
     <ul class="navigation">
       <li>
         <a href="travel-by-ship.html">Отправиться в путешествие<br/> на корабле Яндекс</a>
       </li>
       <li>
-        <a href="#">Высчитать все факторины<br/> на этой земле</a>
+        <a href="factorions.html">Высчитать все факторины<br/> на этой земле</a>
       </li>
       <li>
-        <a href="index.html">Пройти тест<br/> на интелект</a>
+        <a href="index.html">Заполнить анкету<br/> ШРИ 2013</a>
       </li>
     </ul>
   </nav>
@@ -31,19 +39,49 @@
   </div>
 
   <div class="dashboard">
-    <div class="dashboard__status">
-      <button class="ship-status">Проверить остояние корабля</button>
-      <button class="planets-status">Получить информацию с планет</button>
-    </div>
-    <div class="dashboard__control">
+    <ul class="ship-action">
+      <button class="ship-status">Проверить состояние корабля</button>
+      <button class="scanner">Сканировать планеты</button><br/>
       <button class="goto-planetA">Летим на Планету "А"!</button>
       <button class="goto-planetB">Летим на Планету "В"!</button><br/>
       <button class="download-to-ship">Загрузить 500 единиц груза</button>
       <button class="unload-from-ship">Выгрузить 500 единиц груза</button>
-    </div>
-  </div>
+    </ul>
 
+  </div>
+  <footer>
+    <div class="copyright">
+      RubbleCrew © 2013 | all rights reserved
+    </div>
+    <ul class="footer__links">
+      <li>
+        <a href="mailto:vasilyator@gmail.com">Написать нам</a>
+      </li>
+    </ul>
+    <span class="disignedBy">Disigned by OnMyKnee</span>
+  </footer>
+</div>
+<div id="falcon">
+                c==o
+              _/____\_
+       _.,--'" ||^ || "`z._
+      /_/^ ___\||  || _/o\ "`-._
+    _/  ]. L_| || .||  \_/_  . _`--._
+   /_~7  _ . " ||. || /] \ ]. (_)  . "`--.
+  |__7~.(_)_ []|+--+|/____T_____________L|
+  |__|  _^(_) /^   __\____ _   _|
+  |__| (_){_) J ]K{__ L___ _   _]
+  |__| . _(_) \v     /__________|________
+  l__l_ (_). []|+-+-<\^   L  . _   - ---L|
+   \__\    __. ||^l  \Y] /_]  (_) .  _,--'
+     \~_]  L_| || .\ .\\/~.    _,--'"
+      \_\ . __/||  |\  \`-+-<'"
+        "`---._|J__L|X o~~|[\\      "Millenium Yandex"
+               \____/ \___|[//
+                `--'   `--+-'
 </div>
 
+<script src="//yandex.st/jquery/2.0.3/jquery.min.js"></script>
+<script src="/javascripts/ship-engine.js"></script>
 </body>
 </html>

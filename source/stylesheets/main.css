@@ -1,54 +1,6 @@
-
-
-/*** color scheme
-
-#336699
-#FFCC66
-#FFFFFF
-#003366
-
-/*** styles for sweety ***/
-
-.lt-ie8 .tell-us__one-string__left,
-.lt-ie8 .tell-us__more-info__left,
-.lt-ie8 .questions__number-of-question {
-    width: 30px;
-}
-
-
-/*** end of sweety styles ***/
-
-.quest-wrapper {
-  margin: 0;
-  padding: 0;
-}
-
 @import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:900);
 
-
 /*** main style ***/
-.main {
-  width: 100%;
-  background: #8EACC8;
-}
-
-.row {
-  width: 783px;
-  margin: 0 auto;
-  padding: 5px 0 0 0;
-  font-size: 17px;
-  color: #fff;
-  background-color: #456D90;
-  font-family: 'Verdana', sans-serif;
-}
-
-.row a {
-  color: #EFC58A;
-}
-
-nav {
-
-}
 
 
 .tell-us-submit__button,
@@ -58,8 +10,7 @@ nav {
 .input-wrapper__input__textarea,
 .recommendby__other,
 .error.validation-error-message,
-select
-{
+select {
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -120,7 +71,6 @@ select
     background-color: #ffd;
 }
 
-
 .i-igree {
   width: 590px;
   text-align: justify;
@@ -147,67 +97,8 @@ select
   margin-left: 8px;
 }
 
-
-
 /*** End of main style ***/
 
-/*** no-script ***/
-
-.noscript-bg {
-  background-color: black;
-  height: 100%;
-  left: 0;
-  opacity: 0.8;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 999999;
-}
-
-.noscript-text {
-  position: absolute;
-  top: 30%;
-  height: 300px;
-  width: 100%;
-  text-align: center;
-  color: #fff;
-
-  z-index: 9999999;
-}
-
-.noscript-text a {
-  color: #EFC58A;
-}
-
-/*** End of no-script ***/
-
-/*** nav ***/
-
-.navigation {
-  list-style-type: none;
-  width: 783px;
-  margin: 0 auto;
-  padding: 0 0 0 0;
-  font-size: 0;
-}
-
-.navigation li {
-  display: inline-block;
-  border: 1px #c0c0c0 solid;
-  height: 50px;
-  width: 259px;
-  margin:0;
-  padding: 13px 0 0 0;
-  text-align: center;
-  font-size: 13px;
-  background: #54519B;
-}
-
-.navigation a {
-  color: #fff;
-}
-
-/*** End of nav ***/
 
 
 /*** Questions common ***/
@@ -215,6 +106,11 @@ select
 .questions {
   list-style: none;
   padding: 0 0 10px 0;
+}
+
+.quest-wrapper {
+  margin: 0;
+  padding: 0;
 }
 
 .questions__one-quest {
@@ -238,15 +134,12 @@ select
 }
 
 .questions__number-of-question {
-
   width: 157px;
   padding: 17px 0 0 17px;
   text-align: center;
-
 }
 
 .questions__number-of-question span {
-
   padding: 4px 20px 0 0px;
   vertical-align: baseline;
   font: 119px "Source Code Pro";
@@ -274,13 +167,12 @@ select
   margin: 0 5px 0 0;
 }
 
-
 /*** tell-us common ***/
+
 .tell-us-moar {
   padding: 0 0 0 17px;
   margin: 50px 0 0 0;
 }
-
 
 .tell-us-moar__questions {
   list-style: none;
@@ -288,10 +180,8 @@ select
 }
 
 .tell-us__one-string,
-.tell-us__more-info
-{
+.tell-us__more-info{
   margin: 0 0 10px 0;
-
 }
 
 .tell-us__one-string__left,
@@ -299,8 +189,6 @@ select
 .tell-us__more-info__left,
 .tell-us__more-info__right {
   display: inline-block;
-
-
 }
 
 .tell-us__one-string__left,
@@ -313,12 +201,6 @@ select
 /*** End of tell-us common ***/
 
 
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  .tell-us__one-string__right__recommendby__select {
-      padding-right:18px
-  }
-}
-
 .tell-us__one-string__right {
   width: 300px;
   position: relative;
@@ -328,7 +210,6 @@ select
   width: 300px;
   overflow: hidden;
   margin: 16px 0 0 0;
-
 }
 
 .tell-us__one-string__right__recommendby__select {
@@ -347,7 +228,6 @@ select
   appearance:none;
   cursor:pointer;
   background: url('/images/arrow-down-2.png') no-repeat 274px 7px #f8f8f8;
-
 }
 
 .recommendby__other {
@@ -356,41 +236,16 @@ select
   margin: 5px 0 0 0;
 }
 
-
-
 .tell-us__one-string__right__recommendby {
   position:relative;
 }
-
-.tell-us__one-string__right__recommendby:after {
-}
-/**
-.tell-us__one-string__right__recommendby:before {
-    content:'';
-    right: 92px;
-    top: 21px;
-    width: 21px;
-    height: 24px;
-    background:#f8f8f8;
-    position:absolute;
-    pointer-events:none;
-    display:block;
-}
-
-**/
 
 .tell-us_more__welcome {
   margin-bottom: 50px;
 }
 
-.tell-us__one-string__right,
-.tell-us__more-info__right{
-
-}
-
 .tell-us__more-info__input {
   resize: vertical;
-
 }
 
 .tell-us__fileresume {
@@ -407,23 +262,6 @@ select
 .tell-us-submit__button {
   text-align: center;
 }
-
-/*** footer ***/
-
-.footer__links {
-  list-style: none;
-}
-
-.footer__links li,
-.copyright,
-.footer__links {
-  display: inline-block;
-  zoom: 1;
-  *display: inline;
-}
-
-/*** end of footer ***/
-
 
 /*** validation ***/
 
