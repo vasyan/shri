@@ -56,7 +56,7 @@ select {
   margin: 5px 0px 10px 0px;
   padding: 0px 10px 3px 10px;
   height: 24px;
-  width: 277px;
+  width: 284px;
 }
 
 .input-wrapper__input:focus {
@@ -67,13 +67,13 @@ select {
     background-color: #ffd;
 }
 
-.i-igree {
+.agree {
   width: 590px;
   text-align: justify;
   font-family: "Helvetica";
 }
 
-.tell-us__one-string__right.tell-us__i-igree {
+.tell-us__one-string__right.tell-us__agree {
   width: 329px;
   font-size: 12px;
 }
@@ -180,6 +180,10 @@ select {
   margin: 0 0 10px 0;
 }
 
+.tell-us__one-string {
+  position: relative;
+}
+
 .tell-us__one-string__left,
 .tell-us__one-string__right,
 .tell-us__more-info__left,
@@ -199,11 +203,10 @@ select {
 
 .tell-us__one-string__right {
   width: 300px;
-  position: relative;
 }
 
 .tell-us__one-string__right__recommendby__select_wrapper {
-  width: 300px;
+  width: 304px;
   overflow: hidden;
   margin: 16px 0 0 0;
 }
@@ -223,13 +226,15 @@ select {
   -moz-appearance:none;
   appearance:none;
   cursor:pointer;
-  background: url('/images/arrow-down-2.png') no-repeat 274px 7px #f8f8f8;
+  background: url('/images/arrow-down-2.png') no-repeat 280px 7px #f8f8f8;
 }
 
 .recommendby__other {
   display: none;
-  width: 300px;
   margin: 5px 0 0 0;
+  padding: 0 0 3px 6px;
+  width: 294px;
+  height: 24px;
 }
 
 .tell-us__one-string__right__recommendby {
@@ -261,20 +266,41 @@ select {
 
 /*** validation ***/
 
+
+label.valid,
+label.error {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+label.error {
+  color: rgb(248, 99, 99);
+  padding: 6px 10px;
+  margin-top: 0px;
+  font-size: 18px;
+  display: inline-block;
+  background: #EFD78A;
+  color: #000;
+  font-size: 12px;
+  top: 5px;
+  border-radius: 9px 0 0 9px;
+  -moz-border-radius: 9px 0 0 9px;
+  -webkit-border-radius: 9px 0 0 9px;
+}
+
+
 label.valid {
   width: 24px;
   height: 24px;
-  background: url("../images/tick.png") center center no-repeat;
+  background: url("../images/tick.png") 0px 0px no-repeat;
   display: inline-block;
   text-indent: -9999px;
 }
-label.error {
-  font-weight: bold;
-  color: red;
-  padding: 2px 8px;
-  margin-top: 2px;
-}
 
+.tell-us__agree .error {
+  font-weight: normal;
+}
 /*** End of validation ***/
 
 

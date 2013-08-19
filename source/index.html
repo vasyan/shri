@@ -134,8 +134,8 @@
             <div class="tell-us__one-string__right">
               <label class="tell-us__one-string__right__recommendby" for="RecommendBy">Откуда вы узнали о нашем предложении?</label><br/>
               <div class="tell-us__one-string__right__recommendby__select_wrapper">
-                  <select class="tell-us__one-string__right__recommendby__select" id="RecommendBy" tabindex="-1" required="required">
-                    <option class="" value="">Выбрать</option>
+                  <select class="tell-us__one-string__right__recommendby__select" name="recommend" id="RecommendBy" tabindex="-1" required="required">
+                    <option class="" value="default">Выбрать</option>
                     <option class="" value="hr">от HR-менеджера Яндекса</option>
                     <option class="" value="ya.subbotnik">Я.Субботник</option>
                     <option class="" value="Yet another Conference">Yet another Conference</option>
@@ -144,17 +144,18 @@
                     <option class="" value="recommended">по рекомендации</option>
                     <option class="select__recommended-other" value="recommendby__other">другое</option>
                   </select>
-                <input class="recommendby__other" name="recommendedby-other">
+
                </div>
+              <input class="recommendby__other" name="recommendedby-other">
             </div>
           </li>
           <li class="tell-us__one-string">
             <div class="tell-us__one-string__left">
             </div>
-            <div class="tell-us__one-string__right tell-us__i-igree">
+            <div class="tell-us__one-string__right tell-us__agree">
               <strong>
-                <input type="checkbox" value="true" id="agree-checkbox" class="igree-checkbox" required="required">
-                <label class="i-igree" for="agree-checkbox" >
+                <input type="checkbox" name="agree" value="true" id="agree-checkbox" class="agree-checkbox" required="required">
+                <label class="agree" for="agree-checkbox" >
                   Я подверждаю, что введенная выше информация была тестово-выдуманной, последующая обработка и хранение которой бессмысленна и никому не нужна.
                 </label>
               </strong>
@@ -181,6 +182,8 @@
     </footer>
   </div>
 </div>
+
+<!-- IE не захотел работать с js бибилиотеками подтянутыми с api.yandex.ru -->
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js" lang="text/javascript"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" lang="text/javascript"></script>
