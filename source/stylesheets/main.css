@@ -22,9 +22,6 @@ select {
 .input-wrapper__input,
 .tell-us__one-string__textarea {
   width: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
 }
 
 .input-wrapper__input__textarea {
@@ -56,11 +53,10 @@ select {
 }
 
 .input-wrapper__input {
-    margin:5px 0px 10px 0px;
-    padding:10px 10px 10px 10px;
-    height:10px;
-    width:300px;
-    border:#999 1px solid;
+  margin: 5px 0px 10px 0px;
+  padding: 0px 10px 3px 10px;
+  height: 24px;
+  width: 277px;
 }
 
 .input-wrapper__input:focus {
@@ -129,7 +125,7 @@ select {
 /*** End of Questions common ***/
 
 .datepick {
-  background: url("/images/calendar.png") no-repeat 277px 2px #f8f8f8;
+  background: url("/images/calendar.png") no-repeat 277px 4px #f8f8f8;
   border: #999 1px solid;
 }
 
@@ -265,17 +261,19 @@ select {
 
 /*** validation ***/
 
-.error.validation-error-message {
-  position: absolute!important;
-  color: #f00;
-  right: -170px;
-  top: 3px;
-  width: 145px;
-  font-size: 12px;
-  background: #fff;
-  padding: 5px 0 5px 10px;
+label.valid {
+  width: 24px;
+  height: 24px;
+  background: url("../images/tick.png") center center no-repeat;
+  display: inline-block;
+  text-indent: -9999px;
 }
-
+label.error {
+  font-weight: bold;
+  color: red;
+  padding: 2px 8px;
+  margin-top: 2px;
+}
 
 /*** End of validation ***/
 

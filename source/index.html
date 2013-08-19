@@ -9,6 +9,7 @@
   <link rel="stylesheet" type="text/css" href="stylesheets/jquery.ui.datepicker.css">
   <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:900' rel='stylesheet' type='text/css'>
 
+
   <!--[if lt IE 9]>
   <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
@@ -60,7 +61,7 @@
           <a href="travel-by-ship.html">Отправиться в путешествие<br/> на корабле Яндекс</a>
         </li>
         <li>
-          <a href="factorions.html">Высчитать все факторины<br/> на этой земле</a>
+          <a href="factorions.html">Задача с<br/> факторионами</a>
         </li>
         <li>
           <a href="index.html">Заполнить анкету<br/> ШРИ 2013</a>
@@ -69,8 +70,6 @@
     </nav>
   </header>
 
-
-
   <div class="row">
     <form action="" method="post" enctype="multipart/form-data" class="" id="anketa" onsubmit="">
     <fieldset>
@@ -78,7 +77,6 @@
     <ul class="questions">
       <!--  Mustache will place content here  -->
     </ul>
-    
     <div class="tell-us-moar">
         <p class="tell-us_more__welcome">Расскажите нам о себе<p>
         <ul class="tell-us-moar__questions">
@@ -132,13 +130,12 @@
           </li>
           <li class="tell-us__one-string">
             <div class="tell-us__one-string__left">
-
             </div>
             <div class="tell-us__one-string__right">
               <label class="tell-us__one-string__right__recommendby" for="RecommendBy">Откуда вы узнали о нашем предложении?</label><br/>
               <div class="tell-us__one-string__right__recommendby__select_wrapper">
                   <select class="tell-us__one-string__right__recommendby__select" id="RecommendBy" tabindex="-1" required="required">
-                    <option class="" value="no">Выбрать</option>
+                    <option class="" value="">Выбрать</option>
                     <option class="" value="hr">от HR-менеджера Яндекса</option>
                     <option class="" value="ya.subbotnik">Я.Субботник</option>
                     <option class="" value="Yet another Conference">Yet another Conference</option>
@@ -153,20 +150,17 @@
           </li>
           <li class="tell-us__one-string">
             <div class="tell-us__one-string__left">
-
             </div>
             <div class="tell-us__one-string__right tell-us__i-igree">
               <strong>
                 <input type="checkbox" value="true" id="agree-checkbox" class="igree-checkbox" required="required">
                 <label class="i-igree" for="agree-checkbox" >
                   Я подверждаю, что введенная выше информация была тестово-выдуманной, последующая обработка и хранение которой бессмысленна и никому не нужна.
-                  </label>
+                </label>
               </strong>
             </div>
           </li>
-
         </ul>
-
       </div>
       <div class="tell-us-submit">
         <span><input type="submit" class="tell-us-submit__button" hidefocus="true" value="Отправить"></span>
@@ -186,23 +180,14 @@
       <span class="disignedBy">Disigned by OnMyKnee</span>
     </footer>
   </div>
-
 </div>
 
-
-
-
-<script src='//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js'></script>
-<script src="//yandex.st/jquery/2.0.3/jquery.min.js"></script>
-<script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
-<script src="/javascripts/jquery-ui-1.10.3.custom.min.js"></script>
-<script src="/javascripts/jquery.ui.datepicker-ru.js"></script>
-<script src="/javascripts/common.js"></script>
-
-
-<script>
-
-</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js" lang="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" lang="text/javascript"></script>
+<script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js" lang="text/javascript"></script>
+<script src="/javascripts/jquery-ui-1.10.3.custom.min.js" lang="text/javascript"></script>
+<script src="/javascripts/jquery.ui.datepicker-ru.js" lang="text/javascript"></script>
+<script src="/javascripts/common.js" lang="text/javascript" ></script>
 
 </body>
 </html>

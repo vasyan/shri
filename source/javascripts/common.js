@@ -13,18 +13,39 @@ $(function() {
       });
     });
   });
-    jQuery.validator.setDefaults({
-        debug: true,
-        success: "valid"
+
+    $(function () {
+        $.validator.addMethod("valueNotEquals", function(value, element, arg){
+            return arg != value;
+        }, "Value must not equal arg.");
+
+        $('#anketa').validate({
+            rules: {
+                    name: {
+                        minlength: 2,
+                        required: true
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    subject: {
+                        minlength: 2,
+                        required: true
+                    },
+                    message: {
+                        minlength: 2,
+                        required: true
+                    }
+            },
+            highlight: function (element) {
+                $(element).closest('.control-group').removeClass('success').addClass('error');
+            },
+            success: function (element) {
+                element.text('OK!').addClass('valid').closest('.control-group').removeClass('error').addClass('success');
+            }
+        });
     });
-  $('#anketa').validate({
-    errorPlacement: function(error, element) {
-      offset = element.offset();
-      error.insertBefore(element)
-      error.addClass('validation-error-message');
-      error.css('position', 'relative');
-    }
-  });
 
     $('.tell-us__e-mail-input').validate({
         rules: {
