@@ -151,7 +151,7 @@ Planet.prototype.loadCargoTo = function (vessel, cargoWeight) {
     if (vessel.isLanded()) {
         if (this.haveCargo(cargoWeight)) {
             if (vessel.cargo + cargoWeight <= vessel.capacity) {
-                r2d2_logger("message", "Капитан, на корабль «" + vessel.name + "»" + " погружено " + cargoWeight + "единиц груза!");
+                r2d2_logger("message", "Капитан, на корабль «" + vessel.name + "»" + " погружено " + cargoWeight + " единиц груза!");
                 this.availableAmountOfCargo -= cargoWeight;
                 vessel.cargo += cargoWeight;
             } else {
@@ -175,7 +175,7 @@ Planet.prototype.loadCargoTo = function (vessel, cargoWeight) {
 Planet.prototype.unloadCargoFrom = function (vessel, cargoWeight) {
     if (vessel.isLanded()) {
         if (vessel.getOccupiedSpace() >= cargoWeight) {
-            r2d2_logger("message", "Капитан, " + cargoWeight + " выгружено на планету " + this.name);
+            r2d2_logger("message", "Капитан, " + cargoWeight + " т. груза выгружено на планету " + this.name);
             this.availableAmountOfCargo += cargoWeight;
             vessel.cargo -= cargoWeight;
         } else {

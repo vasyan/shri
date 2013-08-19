@@ -57,7 +57,7 @@ $(function () {
         },
         messages: {
             agree: {
-                required: "Согласитесь на все."
+                required: "Согласитесь на всё."
             },
             email: "Введите ваш email.",
             recommend: "Выберите один из вариантов."
